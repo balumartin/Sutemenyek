@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: url('../pics/bg-body.jpg') no-repeat  #16171b;
+    background-size:  cover;
+}
+#container{
+    max-width: 800px;
+    width:95%;
+    margin:100px auto;
+}
+#header{
+    height: 360px;
+    background: url('../pics/bg-header.jpg');
+    position: relative;
+}
+
+#header>ul>li{
+    float:left;
+}
+#header>ul>li>a{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+    display:block;
+}
+#header ul li a:hover{
+    background-color: black;
+}
+
+#header>ul{
+    background-color: rgba(200,0,0,.8);
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+}
+#header ul::after{
+    content:'';
+    clear:both;
+    display:table;
+}
+.submenu {
+    position: absolute;
+    background-color:rgba(200,0,0,1);
+    width:220px;
+    display:none;
+}
+.submenu a{
+    color:white;
+    text-decoration: none;
+    padding: 10px;
+    display:block;
+}
+#header .has-submenu{
+    position: relative;
+}
+
+#header .has-submenu:hover .submenu{
+    display:block;
+}
+
+#header .has-submenu::after{
+    content: '🢓';
+    color:white;
+    position: absolute;
+    top: 23px;
+    right: 12px;
+}
+#header .has-submenu>a{
+    padding-right: 35px;
+}
+#content{
+    background-color: white;
+    padding: 30px;
+}
+#content p{
+    padding: 15px 0;
+    line-height: 1.5;
+}
+#content h1{
+    padding: 15px 0;
+}
+#content h2{
+    padding: 10px 0;
+}
+#cookie-accept{
+    background-color: rgba(0,0,0,.9);
+    color:white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#cookie-accept span{
+    background-color: yellow;
+    color:black;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#cookie-accept span:hover{
+    background-color: red;
+    color:white;
+}
+#box{
+    display:none;
+}
+#box:checked~#cookie-accept{
+    display:none;
+}
